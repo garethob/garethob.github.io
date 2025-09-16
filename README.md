@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Progress 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Running Progress 2025</h1>
+            <div class="progress-overview">
+                <div class="progress-stats">
+                    <span class="current-progress">360km / 500km completed</span>
+                    <span class="remaining-progress">140km to go</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 72%"></div>
+                    </div>
+                    <span class="progress-percentage">72%</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="add-run-section">
+                <h2>Add New Run</h2>
+                <form id="add-run-form" class="add-run-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="run-date" class="form-label">Date</label>
+                            <input type="date" id="run-date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="run-distance" class="form-label">Distance (km)</label>
+                            <input type="number" id="run-distance" class="form-control" step="0.1" min="0.1" placeholder="5.0" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="run-minutes" class="form-label">Minutes</label>
+                            <input type="number" id="run-minutes" class="form-control" min="0" placeholder="25" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="run-seconds" class="form-label">Seconds</label>
+                            <input type="number" id="run-seconds" class="form-control" min="0" max="59" placeholder="30" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn--primary">Add Run</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="form-feedback" class="form-feedback hidden"></div>
+            </section>
+
+            <section class="navigation-section">
+                <div class="view-tabs">
+                    <button class="tab-btn active" data-view="table">Run History</button>
+                    <button class="tab-btn" data-view="distance-chart">Distance Over Time</button>
+                    <button class="tab-btn" data-view="5k-chart">5K Times</button>
+                    <button class="tab-btn" data-view="10k-chart">10K Times</button>
+                    <button class="tab-btn" data-view="cumulative-chart">Cumulative Distance</button>
+                </div>
+            </section>
+
+            <section class="content-sections">
+                <div id="table-view" class="content-section active">
+                    <h2>Run History</h2>
+                    <div class="table-container">
+                        <table id="runs-table" class="runs-table">
+                            <thead>
+                                <tr>
+                                    <th class="sortable" data-sort="date">Date</th>
+                                    <th class="sortable" data-sort="distance">Distance (km)</th>
+                                    <th class="sortable" data-sort="time">Time</th>
+                                    <th class="sortable" data-sort="pace">Pace (per km)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="runs-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="distance-chart-view" class="content-section">
+                    <h2>Distance Over Time</h2>
+                    <div class="chart-container" style="position: relative; height: 400px;">
+                        <canvas id="distance-chart"></canvas>
+                    </div>
+                </div>
+
+                <div id="5k-chart-view" class="content-section">
+                    <h2>5K Times Over Time</h2>
+                    <div class="chart-container" style="position: relative; height: 400px;">
+                        <canvas id="5k-chart"></canvas>
+                    </div>
+                </div>
+
+                <div id="10k-chart-view" class="content-section">
+                    <h2>10K Times Over Time</h2>
+                    <div class="chart-container" style="position: relative; height: 400px;">
+                        <canvas id="10k-chart"></canvas>
+                    </div>
+                </div>
+
+                <div id="cumulative-chart-view" class="content-section">
+                    <h2>Cumulative Distance Progress</h2>
+                    <div class="chart-container" style="position: relative; height: 400px;">
+                        <canvas id="cumulative-chart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
