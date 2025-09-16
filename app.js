@@ -22,38 +22,312 @@ class RunningApp {
     loadSampleData() {
         // Updated sample data to ensure it totals to 360km
         const sampleData = [
-            {"date": "2025-01-15", "distance": 5.0, "minutes": 25, "seconds": 30},
-            {"date": "2025-01-18", "distance": 5.0, "minutes": 18, "seconds": 45},
-            {"date": "2025-01-22", "distance": 8.0, "minutes": 45, "seconds": 20},
-            {"date": "2025-02-01", "distance": 5.0, "minutes": 24, "seconds": 50},
-            {"date": "2025-02-05", "distance": 10.0, "minutes": 52, "seconds": 15},
-            {"date": "2025-02-12", "distance": 6.0, "minutes": 32, "seconds": 10},
-            {"date": "2025-02-18", "distance": 5.0, "minutes": 24, "seconds": 20},
-            {"date": "2025-03-03", "distance": 12.0, "minutes": 63, "seconds": 30},
-            {"date": "2025-03-08", "distance": 5.0, "minutes": 23, "seconds": 55},
-            {"date": "2025-03-15", "distance": 8.0, "minutes": 38, "seconds": 45},
-            {"date": "2025-03-22", "distance": 10.0, "minutes": 51, "seconds": 20},
-            {"date": "2025-04-02", "distance": 5.0, "minutes": 23, "seconds": 40},
-            {"date": "2025-04-09", "distance": 8.0, "minutes": 40, "seconds": 55},
-            {"date": "2025-04-16", "distance": 15.0, "minutes": 78, "seconds": 45},
-            {"date": "2025-04-25", "distance": 5.0, "minutes": 23, "seconds": 15},
-            {"date": "2025-05-05", "distance": 10.0, "minutes": 49, "seconds": 50},
-            {"date": "2025-05-12", "distance": 7.0, "minutes": 32, "seconds": 20},
-            {"date": "2025-05-20", "distance": 5.0, "minutes": 22, "seconds": 58},
-            {"date": "2025-05-28", "distance": 13.0, "minutes": 68, "seconds": 15},
-            {"date": "2025-06-08", "distance": 5.0, "minutes": 22, "seconds": 35},
-            {"date": "2025-06-15", "distance": 10.0, "minutes": 48, "seconds": 40},
-            {"date": "2025-06-25", "distance": 7.0, "minutes": 35, "seconds": 15},
-            {"date": "2025-07-04", "distance": 5.0, "minutes": 22, "seconds": 20},
-            {"date": "2025-07-12", "distance": 11.0, "minutes": 56, "seconds": 30},
-            {"date": "2025-07-20", "distance": 9.0, "minutes": 42, "seconds": 10},
-            {"date": "2025-07-28", "distance": 10.0, "minutes": 47, "seconds": 55},
-            {"date": "2025-08-06", "distance": 5.0, "minutes": 21, "seconds": 50},
-            {"date": "2025-08-14", "distance": 16.0, "minutes": 82, "seconds": 20},
-            {"date": "2025-08-25", "distance": 7.0, "minutes": 33, "seconds": 45},
-            {"date": "2025-09-02", "distance": 5.0, "minutes": 21, "seconds": 30},
-            {"date": "2025-09-10", "distance": 10.0, "minutes": 46, "seconds": 45},
-            {"date": "2025-09-15", "distance": 10.0, "minutes": 44, "seconds": 55}
+            {
+    "date": "2025-01-01",
+    "distance": 0.0,
+    "minutes": 0,
+    "seconds": 0
+  },
+  {
+    "date": "2025-01-13",
+    "distance": 5.0,
+    "minutes": 28,
+    "seconds": 14
+  },
+  {
+    "date": "2025-01-15",
+    "distance": 5.0,
+    "minutes": 29,
+    "seconds": 34
+  },
+  {
+    "date": "2025-01-17",
+    "distance": 5.0,
+    "minutes": 29,
+    "seconds": 9
+  },
+  {
+    "date": "2025-01-20",
+    "distance": 5.0,
+    "minutes": 29,
+    "seconds": 7
+  },
+  {
+    "date": "2025-01-22",
+    "distance": 5.0,
+    "minutes": 27,
+    "seconds": 13
+  },
+  {
+    "date": "2025-02-04",
+    "distance": 10.0,
+    "minutes": 65,
+    "seconds": 0
+  },
+  {
+    "date": "2025-02-17",
+    "distance": 5.0,
+    "minutes": 29,
+    "seconds": 0
+  },
+  {
+    "date": "2025-02-19",
+    "distance": 5.0,
+    "minutes": 29,
+    "seconds": 34
+  },
+  {
+    "date": "2025-02-24",
+    "distance": 5.0,
+    "minutes": 28,
+    "seconds": 47
+  },
+  {
+    "date": "2025-02-26",
+    "distance": 5.0,
+    "minutes": 28,
+    "seconds": 35
+  },
+  {
+    "date": "2025-02-28",
+    "distance": 10.0,
+    "minutes": 62,
+    "seconds": 30
+  },
+  {
+    "date": "2025-03-04",
+    "distance": 5.0,
+    "minutes": 28,
+    "seconds": 12
+  },
+  {
+    "date": "2025-03-08",
+    "distance": 10.0,
+    "minutes": 64,
+    "seconds": 30
+  },
+  {
+    "date": "2025-03-11",
+    "distance": 10.0,
+    "minutes": 58,
+    "seconds": 28
+  },
+  {
+    "date": "2025-03-14",
+    "distance": 5.0,
+    "minutes": 26,
+    "seconds": 48
+  },
+  {
+    "date": "2025-03-19",
+    "distance": 10.0,
+    "minutes": 64,
+    "seconds": 4
+  },
+  {
+    "date": "2025-03-21",
+    "distance": 10.0,
+    "minutes": 57,
+    "seconds": 34
+  },
+  {
+    "date": "2025-03-24",
+    "distance": 10.0,
+    "minutes": 64,
+    "seconds": 0
+  },
+  {
+    "date": "2025-03-28",
+    "distance": 10.0,
+    "minutes": 58,
+    "seconds": 21
+  },
+  {
+    "date": "2025-03-31",
+    "distance": 5.0,
+    "minutes": 29,
+    "seconds": 28
+  },
+  {
+    "date": "2025-04-08",
+    "distance": 10.0,
+    "minutes": 62,
+    "seconds": 30
+  },
+  {
+    "date": "2025-04-14",
+    "distance": 10.0,
+    "minutes": 60,
+    "seconds": 18
+  },
+  {
+    "date": "2025-04-21",
+    "distance": 5.0,
+    "minutes": 29,
+    "seconds": 26
+  },
+  {
+    "date": "2025-04-28",
+    "distance": 5.0,
+    "minutes": 28,
+    "seconds": 25
+  },
+  {
+    "date": "2025-04-30",
+    "distance": 10.0,
+    "minutes": 65,
+    "seconds": 32
+  },
+  {
+    "date": "2025-05-07",
+    "distance": 10.0,
+    "minutes": 59,
+    "seconds": 47
+  },
+  {
+    "date": "2025-05-09",
+    "distance": 10.0,
+    "minutes": 57,
+    "seconds": 2
+  },
+  {
+    "date": "2025-05-12",
+    "distance": 10.0,
+    "minutes": 59,
+    "seconds": 22
+  },
+  {
+    "date": "2025-05-20",
+    "distance": 10.0,
+    "minutes": 59,
+    "seconds": 12
+  },
+  {
+    "date": "2025-05-30",
+    "distance": 5.0,
+    "minutes": 28,
+    "seconds": 2
+  },
+  {
+    "date": "2025-06-03",
+    "distance": 5.0,
+    "minutes": 27,
+    "seconds": 31
+  },
+  {
+    "date": "2025-06-06",
+    "distance": 5.0,
+    "minutes": 25,
+    "seconds": 56
+  },
+  {
+    "date": "2025-06-10",
+    "distance": 10.0,
+    "minutes": 59,
+    "seconds": 6
+  },
+  {
+    "date": "2025-06-13",
+    "distance": 5.0,
+    "minutes": 26,
+    "seconds": 35
+  },
+  {
+    "date": "2025-06-16",
+    "distance": 10.0,
+    "minutes": 63,
+    "seconds": 18
+  },
+  {
+    "date": "2025-06-23",
+    "distance": 5.0,
+    "minutes": 29,
+    "seconds": 29
+  },
+  {
+    "date": "2025-06-25",
+    "distance": 10.0,
+    "minutes": 62,
+    "seconds": 18
+  },
+  {
+    "date": "2025-07-16",
+    "distance": 5.0,
+    "minutes": 29,
+    "seconds": 38
+  },
+  {
+    "date": "2025-07-22",
+    "distance": 5.0,
+    "minutes": 28,
+    "seconds": 36
+  },
+  {
+    "date": "2025-07-30",
+    "distance": 10.0,
+    "minutes": 62,
+    "seconds": 36
+  },
+  {
+    "date": "2025-08-11",
+    "distance": 5.0,
+    "minutes": 28,
+    "seconds": 0
+  },
+  {
+    "date": "2025-08-13",
+    "distance": 5.0,
+    "minutes": 29,
+    "seconds": 25
+  },
+  {
+    "date": "2025-08-15",
+    "distance": 10.0,
+    "minutes": 64,
+    "seconds": 8
+  },
+  {
+    "date": "2025-08-18",
+    "distance": 5.0,
+    "minutes": 27,
+    "seconds": 1
+  },
+  {
+    "date": "2025-08-22",
+    "distance": 10.0,
+    "minutes": 63,
+    "seconds": 45
+  },
+  {
+    "date": "2025-08-25",
+    "distance": 5.0,
+    "minutes": 29,
+    "seconds": 30
+  },
+  {
+    "date": "2025-08-29",
+    "distance": 5.0,
+    "minutes": 28,
+    "seconds": 30
+  },
+  {
+    "date": "2025-09-05",
+    "distance": 10.0,
+    "minutes": 63,
+    "seconds": 35
+  },
+  {
+    "date": "2025-09-08",
+    "distance": 5.0,
+    "minutes": 27,
+    "seconds": 30
+  },
+  {
+    "date": "2025-09-15",
+    "distance": 5.0,
+    "minutes": 27,
+    "seconds": 16
+  }
         ];
 
         this.runs = sampleData.map(run => ({
